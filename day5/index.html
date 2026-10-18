@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Directory</title>
+  <script src="users.js" defer></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; max-width: 700px; margin: 0 auto; padding: 16px; background: #f4f6f8; color: #1f2933; }
+    button { background: #0f5c63; color: #fff; border: none; border-radius: 6px; padding: 10px 16px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #0a3f44; }
+    button:disabled { background: #9aa5b1; cursor: not-allowed; }
+    input { padding: 10px; border: 1px solid #b8c2cc; border-radius: 6px; font-size: 1rem; width: 100%; }
+    label { display: block; margin: 16px 0 6px; font-weight: 600; }
+    #status { min-height: 1.5em; }
+    #status.error { color: #c00000; }
+    #users-list { list-style: none; padding: 0; }
+    #users-list li { background: #fff; border: 1px solid #d9e0e6; border-left: 6px solid #0f5c63; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+    .user-name { font-weight: 700; display: block; }
+  </style>
+</head>
+<body>
+  <h1>User Directory</h1>
+  <button id="load-users" type="button">Load users</button>
+
+  <label for="filter-input">Filter by name</label>
+  <input type="text" id="filter-input" placeholder="Type a name" autocomplete="off">
+
+  <p id="status" role="status"></p>
+  <ul id="users-list"></ul>
+</body>
+</html>
